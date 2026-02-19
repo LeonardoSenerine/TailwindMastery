@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@phosphor-icons/react": "github:phosphor-icons/react",
+    "@radix-ui/react-select": "^2.2.6",
     "@radix-ui/react-tabs": "^1.1.13",
     "framer-motion": "^12.34.2",
     "lucide-react": "^0.574.0",
@@ -19,13 +20,13 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@rocketseat/eslint-config": "^2.2.2",
+    "@rocketseat/eslint-config": "^3.0.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
-    "@types/react": "^19",
+    "@types/react": "^19.2.14",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.1.6",
+    "eslint": "^10.0.0",
+    "eslint-config-next": "^0.2.4",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4",
     "typescript": "^5"
