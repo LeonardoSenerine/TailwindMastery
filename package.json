@@ -10,6 +10,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@formkit/auto-animate": "^0.9.0",
     "@phosphor-icons/react": "github:phosphor-icons/react",
     "@radix-ui/react-select": "^2.2.6",
     "@radix-ui/react-tabs": "^1.1.13",
@@ -17,7 +18,8 @@
     "lucide-react": "^0.574.0",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "tailwind-variants": "^3.2.2"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^3.0.1",

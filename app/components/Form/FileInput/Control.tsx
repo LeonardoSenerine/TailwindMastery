@@ -11,7 +11,7 @@ export function Control({multiple = false, ...props}: ControlProps) {
       return;
     }
     const files = Array.from(event.target.files);
-    onFilesSelected(files);
+    onFilesSelected(files,multiple);
 
   }
   return (
