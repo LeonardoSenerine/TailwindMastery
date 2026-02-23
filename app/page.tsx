@@ -23,10 +23,10 @@ export default function Home() {
             </span>
           </div>
           <div className="flex items-center gap-2">
-             <Button variant="outline" type="submit">
+            <Button variant="outline" type="submit">
               Save
             </Button>
-          <Button type="button" variant="primary">
+            <Button type="button" variant="primary">
               Cancel
             </Button>
           </div>
@@ -115,8 +115,8 @@ export default function Home() {
             >
               Country
             </label>
-           
-             <Select placeholder="Select a country...">
+
+            <Select placeholder="Select a country...">
               <SelectItem value="br" text="Brazil" />
               <SelectItem value="us" text="United States" />
             </Select>
@@ -129,8 +129,8 @@ export default function Home() {
             >
               Timezone
             </label>
-            
-              <Select placeholder="Select a timezone...">
+
+            <Select placeholder="Select a timezone...">
               <SelectItem
                 value="utc8"
                 text="Pacific Standard Time (UTC-08:00)"
@@ -146,56 +146,38 @@ export default function Home() {
                 Write a short introduction.
               </span>
             </label>
-            <div className="space-y-3" >
-              <div className="grid gap-3 grid-cols-2" >
-                 <Select placeholder="" defaultValue="normal"> 
-              <SelectItem
-                value="normal"
-                text="Normal text"
-            
-              />
-              <SelectItem value="md" text="Markdown" />
-            </Select>
-            <div className="flex items-center gap-1" >
-     <button
-          type="button"
-          className=" p-2 hover:bg-zinc-50 rounded-md"
-        >
-          <Bold className="h-4 w-4 text-zinc-500"strokeWidth={3} />
-        </button>
-        <button
-          type="button"
-          className=" p-2 hover:bg-zinc-50 rounded-md"
-        >
-          <Italic
-           className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-        </button>
-         <button
-          type="button"
-          className=" p-2 hover:bg-zinc-50 rounded-md"
-        >
-          <Link
-           className="h-4 w-4 text-zinc-500"strokeWidth={3} />
-        </button>
-         <button
-          type="button"
-          className=" p-2 hover:bg-zinc-50 rounded-md"
-        >
-          <List
-           className="h-4 w-4 text-zinc-500"strokeWidth={3} />
-        </button>
-         <button
-          type="button"
-          className=" p-2 hover:bg-zinc-50 rounded-md"
-        >
-          <ListOrdered
-           className="h-4 w-4 text-zinc-500"strokeWidth={3} />
-        </button>
-            </div>
+            <div className="space-y-3">
+              <div className="grid gap-3 grid-cols-2">
+                <Select placeholder="" defaultValue="normal">
+                  <SelectItem value="normal" text="Normal text" />
+                  <SelectItem value="md" text="Markdown" />
+                </Select>
+                <div className="flex items-center gap-1">
+                  <Button type="button" variant="ghost">
+                    <Bold className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                  </Button>
+                  <Button type="button" variant="ghost">
+                    <Italic className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                  </Button>
+                  <Button type="button" variant="ghost">
+                    <Link className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                  </Button>
+                  <Button type="button" variant="ghost">
+                    <List className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                  </Button>
+                  <Button type="button" variant="ghost">
+                    <ListOrdered
+                      className="h-4 w-4 text-zinc-500"
+                      strokeWidth={3}
+                    />
+                  </Button>
+                </div>
               </div>
-              <TextArea id="bio" defaultValue="I'm a software engineer with 5 years of experience in building scalable web applications. I specialize in React, TypeScript, and Node.js." />
+              <TextArea
+                id="bio"
+                defaultValue="I'm a software engineer with 5 years of experience in building scalable web applications. I specialize in React, TypeScript, and Node.js."
+              />
             </div>
-           
           </div>
 
           <div className="grid gap-3 grid-cols-form pb-5">
@@ -222,7 +204,7 @@ export default function Home() {
             <Button variant="outline" type="submit">
               Save
             </Button>
-          <Button type="button" variant="primary">
+            <Button type="button" variant="primary">
               Cancel
             </Button>
           </div>
