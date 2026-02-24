@@ -15,7 +15,7 @@ export function FileList() {
         return (
           <FileItem
             key={file.name}
-            state="error"
+            state="complete"
             name={file.name}
             size={file.size}
           />

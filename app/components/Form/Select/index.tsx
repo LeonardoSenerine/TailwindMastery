@@ -1,18 +1,18 @@
-'use client'
+"use client";
 
-import * as SelectPrimitive from '@radix-ui/react-select'
-import { ChevronDown } from 'lucide-react'
-import { ReactNode } from 'react'
+import * as SelectPrimitive from "@radix-ui/react-select";
+import { ChevronDown } from "lucide-react";
+import { ReactNode } from "react";
 
 export interface SelectProps extends SelectPrimitive.SelectProps {
-  children: ReactNode
-  placeholder: string
+  children: ReactNode;
+  placeholder: string;
 }
 
-export function Select({ children, placeholder,...props }: SelectProps) {
+export function Select({ children, placeholder, ...props }: SelectProps) {
   return (
-    <SelectPrimitive.Root {...props} >
-      <SelectPrimitive.Trigger className="flex outline-none focus:border-violet-300 focus:ring-4 focus:ring-violet-100 h-11 w-full items-center justify-between gap-2 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm data-[placeholder]:text-zinc-600">
+    <SelectPrimitive.Root {...props}>
+      <SelectPrimitive.Trigger className="flex cursor-pointer dark:border-zinc-700 dark:bg-zinc-800 dark:focus-within:border-violet-500 dark:focus-within:ring-violet-500/20 outline-none focus:border-violet-300 focus:ring-4 focus:ring-violet-100 h-11 w-full items-center justify-between gap-2 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm dark:data-placeholder:text-zinc-400 data-placeholder:text-zinc-600">
         <SelectPrimitive.Value
           placeholder={placeholder}
           className="text-black"
@@ -27,11 +27,11 @@ export function Select({ children, placeholder,...props }: SelectProps) {
           side="bottom"
           position="popper"
           sideOffset={8}
-          className="z-10 animate-slideDownAndFade shadow-sm w-11 overflow-hidden rounded-lg border border-zinc-200 bg-white"
+          className="z-10 animate-slideDownAndFade cursor-pointer shadow-sm w-[var(--radix-select-trigger-width)] overflow-hidden rounded-lg border border-zinc-200 bg-white dark:bg-zinc-800 dark:border-zinc-700"
         >
           <SelectPrimitive.Viewport>{children}</SelectPrimitive.Viewport>
         </SelectPrimitive.Content>
       </SelectPrimitive.Portal>
     </SelectPrimitive.Root>
-  )
+  );
 }

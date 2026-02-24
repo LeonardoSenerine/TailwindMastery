@@ -11,21 +11,23 @@ const fileItems = tv({
   slots: {
     container:
       "group flex items-start gap-4 rounded-lg border p-4 border-zinc-200",
-    icon: "rounded-full border-4 border-violet-100 bg-violet-200 p-2 text-violet-600 ",
+    icon: "rounded-full border-4 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-500 border-violet-100 bg-violet-200 p-2 text-violet-600 ",
     deleteButton: "",
   },
   variants: {
     state: {
       progress: {
-        container: "",
+        container: "dark:border-zinc-700",
       },
       complete: {
-        container: " border-violet-500",
+        container: "dark:border-violet-500/40 border-violet-500",
       },
       error: {
-        container: "bg-error-25 border-error-300",
-        icon: "border-error-50 bg-error-100 text-error-600",
-        deleteButton: "text-error-700 hover:text-error-900",
+        container:
+          "bg-error-25 border-error-300 dark:bg-error-500/5 dark:border-error-500/30",
+        icon: "border-error-50 bg-error-100 text-error-600 dark:bg-error-500/5 dark:border-error-500/30 dark:text-error-400",
+        deleteButton:
+          " dark:bg-error-500/5 dark:text-error-400 dark:hover:text-error-300  text-error-700 hover:text-error-900",
       },
     },
   },
@@ -45,31 +47,37 @@ export function FileItem({ name, size, state }: FileItemProps) {
         {state === "error" ? (
           <div className="flex flex-1 flex-col items-start gap-1">
             <div className="flex flex-col">
-              <span className="text-sm font-medium  text-error-700">
+              <span className="text-sm font-medium dark:text-error-400  text-error-700">
                 Upload Failed, please try again.
               </span>
-              <span className="text-sm text-error-600">{name}</span>
+              <span className="text-sm text-error-600 dark:text-error-500 ">
+                {name}
+              </span>
             </div>
-            <button className="text-sm font-smibold text-error-700 hover:text-error-900">
+            <button className="text-sm font-smibold dark:text-error-400 dark:hover:text-error-300 text-error-700 hover:text-error-900">
               Try again
             </button>
           </div>
         ) : (
           <div className="flex flex-1 flex-col items-start gap-1">
             <div className="flex flex-col">
-              <span className="text-sm font-medium text-zinc-700">{name}</span>
-              <span className="text-sm text-zinc-500">{formatBytes(size)}</span>
+              <span className="text-sm font-medium dark:text-zinc-100 text-zinc-700">
+                {name}
+              </span>
+              <span className="text-sm dark:text-zinc-400 text-zinc-500">
+                {formatBytes(size)}
+              </span>
             </div>
             <div className="flex w-full items-center gap-3">
-              <span className="h-2 flex-1 rounded-full bg-zinc-100">
+              <span className="h-2 flex-1 rounded-full dark:bg-zinc-600 bg-zinc-100">
                 <div
-                  className="h-2 rounded-full bg-violet-600 "
+                  className="h-2 rounded-full bg-violet-600 dark:bg-violet-400"
                   style={{
                     width: state === "complete" ? "100%" : "80%",
                   }}
                 ></div>
               </span>
-              <span className="text-sm font-medium text-zinc-700">
+              <span className="text-sm font-medium dark:text-zinc-300 text-zinc-700">
                 {state === "complete" ? "100%" : "80%"}
               </span>
             </div>
